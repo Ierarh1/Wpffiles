@@ -25,7 +25,10 @@
 
 
         <StackPanel Grid.Column="1" Grid.Row="1">
-            <TextBlock FontWeight="DemiBold" FontSize="20" Foreground="Aqua">Никнейм</TextBlock>
+            <TextBlock FontWeight="DemiBold" FontSize="20" Foreground="Aqua">Имя</TextBlock>
+            <TextBlock FontWeight="DemiBold" FontSize="20" Foreground="Aqua">Фамилия</TextBlock>
+            <TextBlock FontWeight="DemiBold" FontSize="20" Foreground="Aqua">Отчество</TextBlock>
+            <TextBlock FontWeight="DemiBold" FontSize="20" Foreground="Aqua">Должность</TextBlock>
             <TextBlock FontWeight="DemiBold" FontSize="20" Foreground="Aqua">Логин</TextBlock>
             <TextBlock FontWeight="DemiBold" FontSize="20" Foreground="Aqua">Пароль</TextBlock>
             <TextBlock FontWeight="DemiBold" FontSize="20" Foreground="Aqua">Подтверждение пароля</TextBlock>
@@ -36,7 +39,10 @@
             <TextBox Height="20" Margin="4"></TextBox>
             <TextBox Height="20" Margin="4"></TextBox>
             <TextBox Height="20" Margin="4"></TextBox>
-            <TextBox Height="20" Margin="4"></TextBox>
+            <TextBox Height="20" Margin="3"></TextBox>
+            <TextBox Height="20" Margin="3"></TextBox>
+            <TextBox Height="20" Margin="3"></TextBox>
+            <TextBox Height="20" Margin="3"></TextBox>
             <Button Width="75" Click="Button_Click">Регистрация</Button>
             
         </StackPanel>
