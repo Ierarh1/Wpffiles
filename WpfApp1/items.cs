@@ -93,14 +93,29 @@ namespace WpfApp1
             return maker;
         }
 
-        //компоновка элементов при нажатии на научная деятельность
+        //компоновка элементов при нажатии на научная деятельность 
         public ComboBoxItem science(ComboBoxItem ler)
-        {
-
-
+        {//элементы комбобокса
+            Canvas.SetTop(ler,20);
+            ler.Width = 400;
+            ler.Height = 40;
+            ler.FontSize = 20;
+            ler.Opacity = 0.8;
             return ler;
         }
+        //компоновка самого комбобокса с элементами научной деятельности
+        public ComboBox scienceL(ComboBox ger)
+        {
+            //cам комбобокс
+            Canvas.SetTop(ger, 20);
+            Canvas.SetLeft(ger, 40);
+            ger.Width = 400;
+            ger.Height = 40;
+            ger.FontSize = 20;
+            ger.Opacity = 0.8;
+            return ger;
 
+        }
 
 
     } 

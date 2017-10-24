@@ -35,14 +35,11 @@ namespace WpfApp1
         Button socialmake = new Button();// образовательная деятельность
         Button assessement = new Button();// оценочные средства
 
-        //поле верхней менюхи
-        ComboBox topcontent = new ComboBox();
-
-        string mes = System.Reflection.Assembly.GetEntryAssembly().Location;
+        ComboBox sciece = new ComboBox();//
 
         public MainWindow()
         {
-
+           
 
             InitializeComponent();
 
@@ -88,15 +85,13 @@ namespace WpfApp1
             socialmake = lick.menumake(socialmake);
             assessement = lick.menumake(assessement);
 
-
-
+            
 
             validate.Click += new RoutedEventHandler(vxodclick);//создание обработчика входа
 
             exit.Click += new RoutedEventHandler(exitVix);//обработчик выхода
             siencemake.Click += new RoutedEventHandler(siencemakeClick);//обработчик кнопки научная деятельность
             regizan.Click += new RoutedEventHandler(regizanClick);// обработчик для формы регистрации
-
         }
 
 
@@ -166,17 +161,45 @@ namespace WpfApp1
             lefttopitem.Children.Add(passing);// поле для ввода пароля
             lefttopitem.Children.Add(validate);//кнопка вход
 
-            leftmenu.Children.RemoveRange(0,4);//УДАЛЕНИЕ ВСЕХ ЭЛЕМЕНТОВ
-            
+            leftmenu.Children.Clear();//УДАЛЕНИЕ ВСЕХ ЭЛЕМЕНТОВ
+            topRContent.Children.Clear();
 
         }
 
 
         private void siencemakeClick(object sender, RoutedEventArgs e)//нажатие на кнопку научная деятельность
         {
+            ComboBoxItem[] element = new ComboBoxItem[7];
+            for(int i = 0;i<element.Length;i++)
+            {
+                element[i] = new ComboBoxItem();
+
+                lick.science(element[i]);
+                sciece.Items.Add(element[i]); 
+            }
+            element[0].Content = "1.Научные работы";
+            element[1].Content = "2.Изобретения";
+            element[2].Content = "3.Полезные модели";
+            element[3].Content = "4.Программы для ЭВМ";
+            element[4].Content = "5.Учебно-методические работы";
+            element[5].Content = "6.Научные конференции";
+            element[6].Content = "7.Дипломы и грамоты";
+
+            element[0].IsSelected = true;
+
+            lick.scienceL(sciece);
+
+
+            if (topRContent.Children.Count == 0)
+            {
+                topRContent.Children.Add(sciece);
+            }
+            
            
 
-            
+
+           
+        
         }
 
         private void regizanClick(object sender, RoutedEventArgs e)
@@ -190,7 +213,7 @@ namespace WpfApp1
 
         private void buttonicon_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(mes);
+            MessageBox.Show("не жмякай пока не доработал");
         }
 
 
